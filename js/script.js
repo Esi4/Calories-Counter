@@ -49,8 +49,8 @@ const setCalories = function(a) {
     let weights = Number(10) * Number(inputs[2].value);
     let N = genderMale.checked ? weights + heights - ages + 5 : weights + heights - ages - 161;
     caloriesNorm.innerHTML = Math.round((N * a));
-    caloriesMinimal.innerHTML = Math.round(((N * a) - ((N * 1.2) / 100) * 15));
-    caloriesMaximal.innerHTML = Math.round(((N * a) + ((N * 1.2) / 100) * 15));
+    caloriesMinimal.innerHTML = Math.round(((N * a) - (((N * a) / 100) * 15)));
+    caloriesMaximal.innerHTML = Math.round(((N * a) + (((N * a) / 100) * 15)));
 }
 
 
